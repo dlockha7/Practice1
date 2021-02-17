@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <!-- Basic Page Needs–– -->
+  <meta charset="utf-8">
+  <title>Divy Bike Sharing System</title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <!-- Mobile Specific Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/skeleton.css">
+  <link rel="stylesheet" href="css/customize.css">
+  <script src='https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.js'></script>
+  <link href='https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.css' rel='stylesheet' />
+	<style>
+  #map_1,#map_2,#map_3 {
+    height: 500px;
+  }
+  </style>
+
+</head>
+<body>
+
+<div class="container one-bottom" style="margin-top: 50px">
+    <div class="ten columns">
+      <h2>Mobility on Demand Systems: Data-Driven Analysis, Simulation, Visualization</h2>
+      <p>
+        ARCH 6306/6050, DSBA 6010, ITIS 8010/6010: Wednesdays 6pm-8:30pm, Taught Online
+        <br>
+        Dr. Dimitris Papanikolaou | dpapanik@uncc.edu | Urban Synergetics Lab | https://urbansynergeticslab.net
+      </p>
+    </div>
+    <div class="two columns">
+      <a href="https://urbansynergeticslab.net/"><img class="scale-with-grid" src="img/LabLogo_dark_cropped.png"></a>
+    </div>
+  </div>
+  
+  <div class="container one-bottom" style="margin-top: 50px">
+    <div class="twelve columns">
+      <h3>Making an interactive map and plotting data on it</h3>
+      <h5>Use this template for your assignments in the class. This example uses <a href="https://docs.mapbox.com/mapbox.js/api/v3.3.1/">MapBox.js v3.3.1</a> and <a href="http://getskeleton.com/">Skeleton</a> boilerplate </h5>
+    </div>
+  </div>
+  
+  <div class="container one-bottom" >
+    <div class="twelve columns">
+      <h3>Example 1: Simple Map</h3>
+      <h5>
+        This example shows how to create a map using Leaflet.js and MapBox.js, and center the map at a specified pair of lat/long coordinates.
+      </h5>
+    </div>
+  </div>
+  
+
+
+  
+
+<div id='map_1' style='width: 1325px; height: 400px;'></div>
+<script>
+mapboxgl.accessToken = 'pk.eyJ1Ijoic3ViaGFtc2FoIiwiYSI6ImNrbDVlajh3dDFnZXEyb3FpcG1ncHI4MjkifQ.ybCotMq5qBJcKi3xL_O9Og';
+var map_1 = new mapboxgl.Map({
+container: 'map_1', // container ID
+style: 'mapbox://styles/subhamsah/ckl5tigbc4oe017o70qv0p6lz', // style URL
+center: [-87.559152, 41.883036], // starting position [lng, lat]
+zoom: 7 // starting zoom
+});
+</script>
+<br>
+<br>
+<br>
+<br>
+<br>
+<div class="container one-bottom" >
+    <div class="twelve columns">
+      <h3>Example 2: Map with displayed locations of stations from a dataset</h3>
+      <h5>
+        This example shows how to create a map using Leaflet.js/MapBox.js, and then plot a set of circles at the locations of the stations.
+      </h5>
+    </div>
+  </div>
+  
+  
+  <div id='map_2' style='width: 1325px; height: 400px;'></div>
+<script>
+mapboxgl.accessToken = 'pk.eyJ1IjoiY3NhbnNvbSIsImEiOiJja2t5bmlsaGcwODU5Mm9wbDhjOTZjZzR3In0.jHvbBKoo3qNl1zVsufGslw';
+var map_2 = new mapboxgl.Map({
+container: 'map_2', // container ID
+style: 'mapbox://styles/csansom/ckkynt8ay2x2p17qovzq354zp', // style URL
+center: [-87.559152, 41.883036], // starting position [lng, lat]
+zoom: 7 // starting zoom
+});
+</script>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<div class="container one-bottom" >
+    <div class="twelve columns">
+      <h3>Example 3: Map with locations of stations with sizes proportional to their accumulation levels</h3>
+      <h5>
+        This example shows how to create a map using Leaflet.js/MapBox.js, plot a set of circles at the locations of the stations, and adjusts their diameters to be proportional to the inventory levels of the stations.
+      </h5>
+    </div>
+  </div>
+
+<div id='map_3' style='width: 1325px; height: 400px;'></div>
+<script>
+mapboxgl.accessToken = 'pk.eyJ1IjoiY3NhbnNvbSIsImEiOiJja2t5bmlsaGcwODU5Mm9wbDhjOTZjZzR3In0.jHvbBKoo3qNl1zVsufGslw';
+var map_3 = new mapboxgl.Map({
+container: 'map_3', // container ID
+style: 'mapbox://styles/csansom/ckl8ptft806uu19pw0hwdb1pk', // style URL
+center: [-87.559152, 41.883036], // starting position [lng, lat]
+zoom: 7 // starting zoom
+});
+</script>
+
+<br>
+<br>
+<br>
+<br>
+
+  <div class="container one-bottom" >
+    <div class="row">
+      <img class="four columns scale-with-grid quarter-bottom-rel" src="Chart_00.jpg" style="width:450px; height:auto;">
+      <img class="four columns scale-with-grid quarter-bottom-rel" src="Chart_01.jpg" style="width:450px; height:auto;">
+      <img class="four columns scale-with-grid quarter-bottom-rel" src="Chart_02.jpg" style="width:800px; height:auto;">
+    </div>
+    <div class="row">
+      <img class="four columns scale-with-grid quarter-bottom-rel" src="Chart_1.jpg" style="width:450px; height:auto;">
+      <img class="four columns scale-with-grid quarter-bottom-rel" src="Chart_2.jpg" style="width:450px; height:auto;">
+      <img class="four columns scale-with-grid quarter-bottom-rel" src="Chart_3.jpg" style="width:450px; height:auto;">
+    </div>
+  </div>
+  
+  <div class="container one-bottom" >
+    <h2>Group 5</h2>
+    <h5>This is a list of Students in Group 5</h5>
+    <h3>Richie Sansom</h3>
+    <h5>Richie helped in making graphs, and adjusts their diameters to be proportional to the inventory levels of the stations.</h5>
+    <h3>Deven Lockhart</h3>
+    <h5>Deven helped us with the graphs, and he helped us in choosing the styles in which maps should be presented.</h5>
+    <h3>Subham Kumar Sah</h3>
+    <h5>Subham helped us in setting the HTML page, plot a set of circles at the locations of the stations to make it interactive.</h5>
+	<h3>Garrett West</h3>
+    <h5>Garrett helped on setting the github page and making the website.</h5>
+  </div>
+
+
+</body>
+</html>
